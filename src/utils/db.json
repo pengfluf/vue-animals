@@ -1,0 +1,62 @@
+{
+  "penguin": {
+    "enabled": true,
+    "units": [
+    {
+      "species": "Aptenodytes forsteri",
+      "img": "penguin1.jpg",
+      "about": "It's a penguin."
+    }
+  ]
+  },
+  "armadillo": {
+    "enabled": true,
+    "units": [
+      {
+        "species": "Dasypus novemcinctus",
+        "img": "armadillo1.jpg",
+        "about": "It's an armadillo."
+      },
+      {
+        "species": "Euphractus sexcinctus",
+        "img": "armadillo2.jpg",
+        "about": "It's an armadillo."
+      },
+      {
+        "species": "Zaedyus pichiy",
+        "img": "armadillo3.jpg",
+        "about": "It's an armadillo."
+      }
+    ]
+  },
+  "mackerel": {
+    "enabled": true,
+    "units": [
+      {
+        "species": "Rastrelliger brachysoma",
+        "img": "mackerel1.jpg",
+        "about": "It's a mackerel."
+      },
+      {
+        "species": "Rastrelliger kanagurta",
+        "img": "mackerel2.jpg",
+        "about": "It's a mackerel."
+      },
+      {
+        "species": "Scomber colias",
+        "img": "mackerel3.jpg",
+        "about": "It's a mackerel."
+      },
+      {
+        "species": "Scomber japonicus",
+        "img": "mackerel4.png",
+        "about": "It's a mackerel."
+      },
+      {
+        "species": "Scomber scombrus",
+        "img": "mackerel5.jpg",
+        "about": "It's a mackerel."
+      }
+    ]
+  }
+}
