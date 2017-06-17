@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from 'vue';
 import Vuex from 'vuex';
 
@@ -10,9 +11,12 @@ const store = new Vuex.Store({
     db,
   },
   mutations: {
-    toggleCategory(state) {
-      return state;
+    disableFamily(state, i) {
+      state.db[i].enabled = false;
     },
+    enableFamily(state, i) {
+      state.db[i].enabled = true;
+    }
   },
   getters: {
     enabledAnimals: (state) => {
