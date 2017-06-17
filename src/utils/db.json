@@ -1,5 +1,6 @@
-{
-  "penguin": {
+[
+  {
+    "family": "penguin",
     "enabled": true,
     "units": [
     {
@@ -9,7 +10,8 @@
     }
   ]
   },
-  "armadillo": {
+  {
+    "family": "armadillo",
     "enabled": true,
     "units": [
       {
@@ -29,7 +31,8 @@
       }
     ]
   },
-  "mackerel": {
+  {
+    "family": "mackerel",
     "enabled": true,
     "units": [
       {
@@ -59,4 +62,4 @@
       }
     ]
   }
-}
+]

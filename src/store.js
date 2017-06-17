@@ -10,12 +10,21 @@ const store = new Vuex.Store({
     db,
   },
   mutations: {
-    enableCategory(state) {
+    toggleCategory(state) {
       return state;
     },
-    disableCategory(state) {
-      return state;
+  },
+  getters: {
+    enabledAnimals: (state) => {
+      let arrays = [];
+      arrays = state.db
+      .filter(item => item.enabled)
+        .map(item => item.units);
+      const merged = [].concat(...arrays);
+      return merged;
     },
+    families: state =>
+      state.db.map(item => item.family),
   },
 });
 

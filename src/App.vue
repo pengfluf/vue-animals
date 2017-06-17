@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    
+    <toolbar />
+    <card-board />
   </div>
 </template>
 
@@ -8,13 +9,13 @@
 import 'normalize.css';
 
 import Toolbar from './components/Toolbar';
-import Card from './components/Card';
+import CardBoard from './components/CardBoard';
 
 export default {
   name: 'app',
   components: {
-    Card,
     Toolbar,
+    CardBoard,
   },
 };
 </script>
