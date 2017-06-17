@@ -80,6 +80,8 @@ export default {
       border: 1px solid #2c3e50;
       transition: transform 0.3s;
 
+      cursor: pointer;
+
       &:hover {
         transform: scale(1.03);
       }

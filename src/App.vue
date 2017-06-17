@@ -27,7 +27,11 @@ export default {
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
-  margin-top: 50px;
+  margin-top: 40px;
+
+  @media (max-width: 575px) {
+    margin-top: 0;
+  }
 }
 
 *,
