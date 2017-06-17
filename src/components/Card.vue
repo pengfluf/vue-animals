@@ -1,9 +1,5 @@
 <template>
   <article class="card">
-    <!-- <div
-      class="card__img"
-      :style="animalImage"
-    ></div> -->
     <a
       class="card_image"
       :href="wikiLink"
