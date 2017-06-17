@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <toolbar />
-    <card-board />
+    <div class="container-fluid">
+      <toolbar />
+      <card-board />
+    </div>
   </div>
 </template>
 
 <script>
 import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap-grid.css';
 
 import Toolbar from './components/Toolbar';
 import CardBoard from './components/CardBoard';
@@ -23,8 +26,61 @@ export default {
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 50px;
 }
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+
+  overflow-x: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
 </style>

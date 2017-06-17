@@ -6,7 +6,8 @@
     {
       "species": "Aptenodytes forsteri",
       "img": "penguin1.jpg",
-      "about": "It's a penguin."
+      "about": "The emperor penguin is the tallest and heaviest of all living penguin species and is endemic to Antarctica.",
+      "wikiLink": "https://en.wikipedia.org/wiki/Emperor_penguin"
     }
   ]
   },
@@ -17,17 +18,20 @@
       {
         "species": "Dasypus novemcinctus",
         "img": "armadillo1.jpg",
-        "about": "It's an armadillo."
+        "about": "The nine-banded armadillo, or the nine-banded, long-nosed armadillo, is a medium-sized mammal found in North, Central, and South America, making it the most widespread of the armadillos.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Nine-banded_armadillo"
       },
       {
         "species": "Euphractus sexcinctus",
         "img": "armadillo2.jpg",
-        "about": "It's an armadillo."
+        "about": "The six-banded armadillo, also known as the yellow armadillo, is an armadillo found in South America. The sole member of its genus, it was first described by Swedish zoologist Carl Linnaeus in 1758.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Six-banded_armadillo"
       },
       {
         "species": "Zaedyus pichiy",
         "img": "armadillo3.jpg",
-        "about": "It's an armadillo."
+        "about": "The pichi or dwarf armadillo is a small armadillo native to Argentina and Chile. It is the only living member of the genus Zaedyus, and the only armadillo to hibernate.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Pichi"
       }
     ]
   },
@@ -38,27 +42,32 @@
       {
         "species": "Rastrelliger brachysoma",
         "img": "mackerel1.jpg",
-        "about": "It's a mackerel."
+        "about": "The short mackerel or shortbodied mackerel is a species of mackerel in the family Scombridae. Its habitat is the shallow waters of Southeast Asia and Melanesia, feeding mainly on small zooplankton.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Short_mackerel"
       },
       {
         "species": "Rastrelliger kanagurta",
         "img": "mackerel2.jpg",
-        "about": "It's a mackerel."
+        "about": "The Indian mackerel is a species of mackerel in the scombrid family (family Scombridae) of order Perciformes. It is commonly found in the Indian and West Pacific oceans, and their surrounding seas.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Indian_mackerel"
       },
       {
         "species": "Scomber colias",
         "img": "mackerel3.jpg",
-        "about": "It's a mackerel."
+        "about": "Atlantic chub mackerel is a pelagic schooling species of mackerel found in the Atlantic Ocean, the Mediterranean Sea, and the Black Sea.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Atlantic_chub_mackerel"
       },
       {
         "species": "Scomber japonicus",
-        "img": "mackerel4.png",
-        "about": "It's a mackerel."
+        "img": "mackerel4.jpg",
+        "about": "The chub mackerel, Pacific mackerel, or Pacific chub mackerel is a mackerel which closely resembles the Atlantic chub mackerel.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Chub_mackerel"
       },
       {
         "species": "Scomber scombrus",
         "img": "mackerel5.jpg",
-        "about": "It's a mackerel."
+        "about": "The Atlantic mackerel, also known as Boston mackerel, Norwegian mackerel, Scottish mackerel or just mackerel. The fish's dorsum is steel-blue and marked with wavy black lines, while the belly is silvery-white.",
+        "wikiLink": "https://en.wikipedia.org/wiki/Atlantic_mackerel"
       }
     ]
   }
