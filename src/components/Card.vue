@@ -1,19 +1,21 @@
 <template>
-  <article class="card">
-    <a
-      class="card_image"
-      :href="wikiLink"
-    >
-      <img
-        class="card__img"
-        :src="animalImage" alt="">
-    </a>
-    <a
-      class="card__species"
-      :href="wikiLink"
-    >{{species}}</a>
-    <p class="card__about">{{about}}</p>
-  </article>
+  <transition name="fade">
+    <article class="card">
+      <a
+        class="card_image"
+        :href="wikiLink"
+      >
+        <img
+          class="card__img"
+          :src="animalImage" alt="">
+      </a>
+      <a
+        class="card__species"
+        :href="wikiLink"
+      >{{species}}</a>
+      <p class="card__about">{{about}}</p>
+    </article>
+  </transition>
 </template>
 
 <script>
@@ -110,4 +112,13 @@ export default {
     }
   }
 
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.4s ease-out;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
 </style>
