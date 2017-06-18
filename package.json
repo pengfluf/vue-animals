@@ -1,7 +1,7 @@
 {
   "name": "vue-animals",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Just some pretty cards with different animals. Written in Vue.js.",
   "author": "Fluffy Penguin",
   "private": true,
   "scripts": {
