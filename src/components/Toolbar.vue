@@ -4,10 +4,7 @@
       v-for="(item, key, i) in $store.getters.families"
       key="key"
       class="button-family"
-      :class="item === $store.state.db[key].family
-      && $store.state.db[key].enabled ?
-        'button-family--enabled' :
-        'button-family--disabled'"
+      :class="buttonState(item, key)"
       @click="handleClick"
     >
       {{capitalize(item)}}
@@ -31,6 +28,32 @@ export default {
         store.commit('enableFamily', i);
       }
     },
+    buttonState(item, key) {
+      const classes = [];
+      const db = this.$store.state.db;
+
+      if (item === db[key].family && db[key].enabled) {
+        classes.push('button-family--enabled');
+      } else {
+        classes.push('button-family--disabled');
+      }
+
+      switch (item) {
+        case 'penguin':
+          classes.push('icon-penguin');
+          break;
+        case 'armadillo':
+          classes.push('icon-armadillo');
+          break;
+        case 'mackerel':
+          classes.push('icon-mackerel');
+          break;
+        default:
+          classes.push('');
+      }
+
+      return classes;
+    },
     capitalize(item) {
       return capitalize(item);
     },
@@ -38,14 +61,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .toolbar {
     display: flex;
     justify-content: center;
 
     position: fixed;
-    top: 20%;
-    left: 83%;
+    top: 7%;
     right: 0;
     z-index: 5;
 
@@ -53,13 +75,14 @@ export default {
 
     @media (max-width: 575px) {
       flex-direction: column;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     @media (min-width: 576px) {
       position: static;
+
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -80,10 +103,12 @@ export default {
     @media (max-width: 575px) {
       margin-top: 10px;
       margin-right: 0;
-      padding-left: 10px;
+      padding: 10px 0;
 
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+
+      text-indent: -9999px;
 
       &:first-child {
         margin-top: 0;
@@ -151,6 +176,31 @@ export default {
           left: 0;
         }
       }
+    }
+  }
+
+  .icon-penguin,
+  .icon-armadillo,
+  .icon-mackerel {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .icon-penguin {
+    @media (max-width: 575px) {
+      background-image: url('../../static/icon-penguin.svg');
+    }
+  }
+
+  .icon-armadillo {
+    @media (max-width: 575px) {
+      background-image: url('../../static/icon-armadillo.svg');
+    }
+  }
+
+  .icon-mackerel {
+    @media (max-width: 575px) {
+      background-image: url('../../static/icon-mackerel.svg');
     }
   }
 </style>
