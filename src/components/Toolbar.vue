@@ -108,7 +108,7 @@ export default {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
 
-      text-indent: -9999px;
+      color: transparent;
 
       &:first-child {
         margin-top: 0;
@@ -144,6 +144,7 @@ export default {
         @media (max-width: 575px) {
           font-size: 9px;
           left: 0;
+          color: transparent;
         }
       }
     }
@@ -174,6 +175,7 @@ export default {
         @media (max-width: 575px) {
           font-size: 9px;
           left: 0;
+          color: transparent;
         }
       }
     }
