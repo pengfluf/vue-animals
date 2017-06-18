@@ -1,21 +1,18 @@
-# vue-animals
+# About
 
-> A Vue.js project
+![Penguin](https://github.com/pengfluf/vue-animals/blob/master/readme-image.jpg)
 
-## Build Setup
+* Written in Vue.js
+* Responsive
+* Awesome cards
+* Animals will be replaced by more lovely ones (probably)
+
+### Scripts
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
+# dev-server at localhost:8080
 npm run dev
 
-# build for production with minification
+# build
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
