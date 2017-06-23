@@ -1,13 +1,13 @@
 <template>
   <div class="toolbar">
     <button
-      v-for="(item, i, key) in $store.getters.families"
-      :key="key"
+      v-for="(item, i) in $store.getters.families"
+      :key="`${item}${i}`"
+      @click="handleClick"
       class="button-family"
       :class="buttonState(item, i)"
-      @click="handleClick"
     >
-      {{capitalize(item)}}
+      {{capitalize(item) + 's'}}
     </button>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
   methods: {
     handleClick(event) {
       const store = this.$store;
-      const text = event.target.innerText.toLowerCase();
+      const text = event.target.innerText.toLowerCase().slice(0, -1);
       const i = store.getters.families.indexOf(text);
       if (text === store.state.db[i].family && store.state.db[i].enabled) {
         store.commit('disableFamily', i);
@@ -78,9 +78,12 @@ export default {
     }
 
     @media (min-width: 576px) {
-      position: static;
-
-      max-width: 90%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: rgba(41, 98, 255, 0.4);
+      padding-top:10px;
+      padding-bottom: 10px;
       margin-left: auto;
       margin-right: auto;
     }

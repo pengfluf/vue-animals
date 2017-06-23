@@ -46,7 +46,7 @@ export default {
     min-height: 400px;
 
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 15px;
 
     border: 1px solid lightgray;
 

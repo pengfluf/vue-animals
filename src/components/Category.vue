@@ -1,6 +1,7 @@
 <template>
-  <div class="row justify-content-center">
-
+  <div
+    class="row justify-content-center"
+  >
     <div class="col-12">
       <h2 class="category__title">{{title}}</h2>
     </div>
@@ -8,6 +9,7 @@
     <div
       class="col-12 col-md-6 col-lg-4"
       v-for="(animal, i) in $store.getters.categories[categIndex(title)]"
+      :key="`${animal}${i}`"
     >
       <card
         :img="animal.img"
@@ -33,7 +35,8 @@ export default {
   ],
   methods: {
     categIndex(title) {
-      return this.$store.getters.families.indexOf(title.toLowerCase());
+      const families = this.$store.getters.families;
+      return families.indexOf(title.toLowerCase().slice(0, -1));
     },
   },
 };
@@ -42,7 +45,10 @@ export default {
 <style lang="scss" scoped>
 
 .category__title {
-  margin-top: 30px;
+  margin-top: 50px;
+
+  font-size: 27px;
+  text-align: center;
 }
 
 </style>

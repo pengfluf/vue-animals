@@ -1,9 +1,16 @@
 <template>
   <div class="card-board">
     <category
-      v-for="family in $store.getters.families"
-      :title="capitalize(family)"
+      v-for="(family, i) in $store.getters.families"
+      :key="`${family}${i}`"
+      v-if="showCategory(i)"
+      :title="capitalize(family) + 's'"
     />
+    <p
+      v-show="noAnimals()"
+      class="card-board__no-animals"
+    >
+      There's no animals : (</p>
   </div>
 </template>
 
@@ -20,6 +27,15 @@ export default {
   methods: {
     capitalize(item) {
       return capitalize(item);
+    },
+    showCategory(i) {
+      return this.$store.state.db[i].family ===
+      this.$store.getters.families[i] &&
+      this.$store.state.db[i].enabled;
+    },
+    noAnimals() {
+      const arr = this.$store.state.db.filter(item => item.enabled);
+      return !arr[0];
     },
   },
 };
