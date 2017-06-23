@@ -1,35 +1,26 @@
 <template>
   <div class="card-board">
-    <div class="row">
-      <div
-        v-for="(animal, key) in $store.getters.enabledAnimals"
-        class="col-12 col-md-6 col-lg-4"
-      >
-        <card
-          key="key"
-          :img="animal.img"
-          :species="animal.species"
-          :about="animal.about"
-          :wikiLink="animal.wikiLink"
-        />
-      </div>
-      <div
-        v-show="!$store.getters.enabledAnimals[0]"
-        class="card-board__no-animals"
-      >
-        There's no animals here : (
-      </div>
-    </div>
+    <category
+      v-for="family in $store.getters.families"
+      :title="capitalize(family)"
+    />
   </div>
 </template>
 
 <script>
-import Card from './Card';
+import capitalize from 'lodash.capitalize';
+
+import Category from './Category';
 
 export default {
   name: 'card-board',
   components: {
-    Card,
+    Category,
+  },
+  methods: {
+    capitalize(item) {
+      return capitalize(item);
+    },
   },
 };
 </script>

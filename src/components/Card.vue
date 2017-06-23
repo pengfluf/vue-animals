@@ -7,7 +7,8 @@
       >
         <img
           class="card__img"
-          :src="animalImage" alt="">
+          :src="animalImage"
+          :alt="species">
       </a>
       <a
         class="card__species"

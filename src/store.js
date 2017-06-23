@@ -19,16 +19,12 @@ const store = new Vuex.Store({
     }
   },
   getters: {
-    enabledAnimals: (state) => {
-      let arrays = [];
-      arrays = state.db
-      .filter(item => item.enabled)
-        .map(item => item.units);
-      const merged = [].concat(...arrays);
-      return merged;
-    },
+
     families: state =>
       state.db.map(item => item.family),
+
+    categories: state =>
+      state.db.map(item => item.units)
   },
 });
 

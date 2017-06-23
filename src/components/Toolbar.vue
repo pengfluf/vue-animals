@@ -1,10 +1,10 @@
 <template>
   <div class="toolbar">
     <button
-      v-for="(item, key, i) in $store.getters.families"
-      key="key"
+      v-for="(item, i, key) in $store.getters.families"
+      :key="key"
       class="button-family"
-      :class="buttonState(item, key)"
+      :class="buttonState(item, i)"
       @click="handleClick"
     >
       {{capitalize(item)}}
@@ -28,11 +28,11 @@ export default {
         store.commit('enableFamily', i);
       }
     },
-    buttonState(item, key) {
+    buttonState(item, i) {
       const classes = [];
       const db = this.$store.state.db;
 
-      if (item === db[key].family && db[key].enabled) {
+      if (item === db[i].family && db[i].enabled) {
         classes.push('button-family--enabled');
       } else {
         classes.push('button-family--disabled');
